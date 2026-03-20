@@ -46,3 +46,7 @@ yt-dlp --cookies "./cookies/exported-cookies.txt" --list-subs "<video-url>"
 - Exported cookie files are sensitive.
 - Do not share or upload them.
 - Delete them after use.
+
+## License
+
+MIT. See `LICENSE`.
