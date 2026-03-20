@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Cookie Exporter</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        margin: 12px;
+        width: 360px;
+      }
+
+      h1 {
+        font-size: 14px;
+        margin: 0 0 10px;
+      }
+
+      label {
+        display: block;
+        font-size: 12px;
+        margin-bottom: 6px;
+        color: #444;
+      }
+
+      input,
+      button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input {
+        padding: 8px;
+        margin-bottom: 8px;
+      }
+
+      .row {
+        display: flex;
+        gap: 8px;
+      }
+
+      button {
+        padding: 9px;
+        border: 1px solid #aaa;
+        background: #f7f7f7;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #efefef;
+      }
+
+      .muted {
+        margin-top: 10px;
+        color: #666;
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      #message {
+        margin-top: 8px;
+        font-size: 12px;
+        min-height: 16px;
+      }
+
+      .ok {
+        color: #0a7a2f;
+      }
+
+      .err {
+        color: #b00020;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Web Cookie Exporter (Local Only)</h1>
+
+    <label for="domainInput">Domain (optional, e.g. youtube.com)</label>
+    <input id="domainInput" placeholder="Leave empty to use current tab domain" />
+
+    <div class="row">
+      <button id="exportCurrentBtn">Export Current Tab</button>
+      <button id="exportDomainBtn">Export Domain</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div class="muted">
+      Local export only. No network requests. File contains sensitive session data; delete it after use.
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

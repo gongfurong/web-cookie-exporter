@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Web Cookie Exporter (Local Only)",
+  "version": "1.0.0",
+  "description": "Export cookies for current or specified site in Netscape format for local tooling.",
+  "browser_action": {
+    "default_title": "Web Cookie Exporter",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "cookies",
+    "downloads",
+    "tabs",
+    "<all_urls>"
+  ],
+  "incognito": "spanning",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "web-cookie-exporter-local@example.local",
+      "strict_min_version": "109.0"
+    }
+  }
+}
